@@ -105,6 +105,202 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
+        /* Enhanced reminder management styles */
+        .reminder-management {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .reminder-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .reminder-tab {
+            padding: 0.75rem 1rem;
+            border: none;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .reminder-tab.active {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .reminder-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .reminder-item {
+            background: var(--bg-secondary);
+            padding: 1.25rem;
+            border-radius: 12px;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .reminder-content {
+            flex: 1;
+        }
+
+        .reminder-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .reminder-details {
+            display: flex;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .reminder-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .reminder-action-btn {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .reminder-action-btn:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .reminder-action-btn.delete {
+            color: #e74c3c;
+        }
+
+        /* Enhanced contact management */
+        .contact-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .contact-item {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-number {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .contact-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        /* Enhanced theme toggle */
+        .theme-toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .theme-indicator {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Enhanced time greeting */
+        .time-greeting {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Enhanced platform warnings */
+        .platform-warning-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Enhanced link display */
+        .app-link-display {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .app-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .app-link:hover::after {
+            content: 'https://mashifmj-prog.github.io/VerseCurator-dev5/';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--dark);
+            color: var(--light);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
         /* Rating Modal Styles */
         .rating-modal {
             display: none;
@@ -1093,269 +1289,64 @@
             color: var(--text-primary); /* Ensures proper contrast */
         }
 
-        .share-option.device-share {
+        .share-option.device-share .share-icon {
             background: var(--gradient);
+        }
+
+        .share-option.device-share .share-icon i {
             color: white;
-            border-color: transparent;
-            grid-column: span 2;
         }
 
-        .share-option.device-share span {
-            color: white; /* White text for device share button */
+        .share-option.whatsapp .share-icon {
+            background: #25D366;
         }
 
-        /* Note Modal */
-        .note-input {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .modal-actions {
-            display: flex;
-            gap: 0.75rem;
-            justify-content: flex-end;
-            margin-top: 1.5rem;
-        }
-
-        /* Notification Styles */
-        .notification {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            left: 1rem;
-            background: #2ecc71;
+        .share-option.whatsapp .share-icon i {
             color: white;
-            padding: 1rem 1.25rem;
-            border-radius: 8px;
-            z-index: 1001;
-            box-shadow: var(--shadow-hover);
-            font-weight: 600;
-            animation: slideIn 0.3s ease;
-            text-align: center;
         }
 
-        .notification.error {
-            background: #e74c3c;
+        .share-option.facebook .share-icon {
+            background: #1877F2;
         }
 
-        .notification.info {
-            background: #3498db;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(-100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes slideOut {
-            from { transform: translateY(0); opacity: 1; }
-            to { transform: translateY(-100%); opacity: 0; }
-        }
-
-        /* === NEW ENHANCEMENTS CSS === */
-        
-        /* Collapsible Sections */
-        .collapsible-section {
-            margin-bottom: 1.5rem;
-        }
-
-        .collapsible-btn {
-            width: 100%;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 1.25rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow);
-        }
-
-        .collapsible-btn:hover {
-            background: var(--bg-secondary);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .collapsible-btn i:last-child {
-            transition: transform 0.3s ease;
-        }
-
-        .collapsible-btn.active i:last-child {
-            transform: rotate(180deg);
-        }
-
-        .collapsible-content {
-            display: none;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-top: none;
-            border-radius: 0 0 14px 14px;
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-        }
-
-        /* Share History Styles */
-        .history-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .history-item {
-            background: var(--bg-secondary);
-            padding: 1rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .history-content {
-            flex: 1;
-        }
-
-        .history-verse {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        .history-details {
-            display: flex;
-            gap: 1rem;
-            color: var(--text-secondary);
-            font-size: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .history-platform {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .history-actions {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .history-action-btn {
-            background: none;
-            border: none;
-            color: var(--primary-color);
-            cursor: pointer;
-            padding: 0.25rem;
-            border-radius: 4px;
-            transition: all 0.2s ease;
-        }
-
-        .history-action-btn:hover {
-            background: var(--bg-tertiary);
-        }
-
-        .empty-history {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-secondary);
-        }
-
-        /* WhatsApp Broadcast Styles */
-        .broadcast-section {
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .broadcast-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .broadcast-step {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .step-number {
-            width: 30px;
-            height: 30px;
-            background: var(--gradient);
+        .share-option.facebook .share-icon i {
             color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            flex-shrink: 0;
         }
 
-        .step-content {
-            flex: 1;
+        .share-option.twitter .share-icon {
+            background: #1DA1F2;
         }
 
-        .step-content h4 {
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .step-content p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 0.75rem;
-        }
-
-        .copy-btn {
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 0.5rem 1rem;
-            color: var(--text-primary);
-            cursor: pointer;
-            font-size: 0.85rem;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .copy-btn:hover {
-            background: var(--bg-primary);
-        }
-
-        .copy-btn.success {
-            background: #2ecc71;
+        .share-option.twitter .share-icon i {
             color: white;
-            border-color: #2ecc71;
         }
 
-        .contacts-section {
-            margin-top: 1.5rem;
+        .share-option.telegram .share-icon {
+            background: #0088cc;
         }
 
-        .contacts-list {
+        .share-option.telegram .share-icon i {
+            color: white;
+        }
+
+        .share-option.email .share-icon {
+            background: #EA4335;
+        }
+
+        .share-option.email .share-icon i {
+            color: white;
+        }
+
+        .share-option.sms .share-icon {
+            background: #34B7F1;
+        }
+
+        .share-option.sms .share-icon i {
+            color: white;
+        }
+
+        /* Contact List - Mobile Optimized */
+        .contact-list {
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
@@ -1364,41 +1355,28 @@
         }
 
         .contact-item {
-            background: var(--bg-primary);
+            background: var(--bg-secondary);
             padding: 1rem;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
+            border-radius: 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
         }
 
         .contact-info {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            flex: 1;
         }
 
-        .contact-avatar {
-            width: 40px;
-            height: 40px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+        .contact-name {
             font-weight: 600;
-        }
-
-        .contact-details h4 {
-            font-size: 0.95rem;
             margin-bottom: 0.25rem;
+            color: var(--text-primary);
         }
 
-        .contact-details p {
-            font-size: 0.8rem;
+        .contact-number {
             color: var(--text-secondary);
+            font-size: 0.85rem;
         }
 
         .contact-actions {
@@ -1409,324 +1387,311 @@
         .contact-action-btn {
             background: none;
             border: none;
-            color: var(--text-secondary);
+            color: var(--primary-color);
             cursor: pointer;
             padding: 0.5rem;
             border-radius: 6px;
             transition: all 0.2s ease;
         }
 
-        .contact-action-btn:hover {
-            background: var(--bg-tertiary);
-            color: var(--text-primary);
+        .contact-action-btn.delete {
+            color: #e74c3c;
         }
 
-        .empty-contacts {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-secondary);
-        }
-
-        /* Reminder Management Styles */
-        .reminder-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .reminder-item {
+        .add-contact-form {
             background: var(--bg-secondary);
             padding: 1.25rem;
             border-radius: 12px;
-            border-left: 4px solid var(--primary-color);
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-row {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
             gap: 1rem;
         }
 
-        .reminder-content {
-            flex: 1;
-        }
-
-        .reminder-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .reminder-details {
-            display: flex;
+        /* Stats Modal - Mobile Optimized */
+        .stats-grid-modal {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            flex-wrap: wrap;
         }
 
-        .reminder-actions {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .reminder-action-btn {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
-
-        .reminder-action-btn:hover {
-            background: var(--bg-tertiary);
-            color: var(--text-primary);
-        }
-
-        .reminder-action-btn.delete:hover {
-            background: #e74c3c;
-            color: white;
-        }
-
-        .empty-reminders {
+        .stat-card-modal {
+            background: var(--bg-secondary);
+            padding: 1.5rem 1rem;
+            border-radius: 12px;
             text-align: center;
-            padding: 2rem;
-            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
         }
 
-        /* Responsive Design - Tablet and Desktop */
+        /* Media Queries - Tablet */
         @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
             .app-container {
-                max-width: 1200px;
+                max-width: 768px;
                 margin: 0 auto;
+                padding: 2rem;
             }
-            
+
             .app-header {
-                padding: 1.5rem;
+                border-radius: 20px 20px 0 0;
+                margin-bottom: 2rem;
             }
-            
+
             .title-group h1 {
                 font-size: 2rem;
             }
-            
-            .title-group .app-tagline {
-                font-size: 0.85rem;
-            }
-            
+
             .time-display {
                 display: block;
-                font-size: 0.9rem;
-                opacity: 0.9;
+                font-size: 1.1rem;
+                font-weight: 600;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
             }
-            
+
             .time-period-indicator {
                 justify-content: center;
             }
-            
-            .period {
-                min-width: 100px;
-            }
-            
+
             .panel-grid {
                 flex-direction: row;
-                flex-wrap: wrap;
+                gap: 1.5rem;
             }
-            
+
             .control-group {
                 flex: 1;
-                min-width: 200px;
             }
-            
+
             .action-buttons {
                 flex-direction: row;
             }
-            
+
             .action-buttons-row {
                 flex: 1;
             }
-            
+
             .stats-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
-            
+
             .share-options-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
-            
-            .share-option.device-share {
-                grid-column: span 1;
-            }
-            
-            .broadcast-steps {
+
+            .form-row {
                 flex-direction: row;
-                flex-wrap: wrap;
             }
-            
-            .broadcast-step {
+
+            .form-row .form-input {
                 flex: 1;
-                min-width: 250px;
-                flex-direction: column;
             }
-            
-            .step-number {
-                width: 40px;
-                height: 40px;
-                font-size: 1.1rem;
-            }
-            
+
             .modal-content {
                 max-width: 600px;
             }
         }
 
+        /* Media Queries - Desktop */
         @media (min-width: 1024px) {
+            .app-container {
+                max-width: 1024px;
+            }
+
             .app-main {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 1.5rem;
-                padding: 1.5rem;
+                gap: 2rem;
+                align-items: start;
             }
-            
+
             .verse-section {
                 grid-column: 1 / -1;
             }
-            
+
             .stats-section {
                 grid-column: 1 / -1;
             }
-            
-            .custom-section {
-                grid-column: 1 / -1;
+
+            .share-options-grid {
+                grid-template-columns: repeat(4, 1fr);
             }
-            
-            .collapsible-section {
-                grid-column: 1 / -1;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-1 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .mt-1 {
+            margin-top: 1rem;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Toast Notifications */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--card-bg);
+            color: var(--text-primary);
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-hover);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .toast.show {
+            opacity: 1;
+        }
+
+        .toast.success {
+            border-left: 4px solid #2ecc71;
+        }
+
+        .toast.error {
+            border-left: 4px solid #e74c3c;
+        }
+
+        .toast.warning {
+            border-left: 4px solid #f39c12;
+        }
+
+        .toast.info {
+            border-left: 4px solid #3498db;
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Enhanced Responsive Design */
+        @media (max-width: 480px) {
+            .app-header {
+                padding: 0.75rem;
+            }
+
+            .title-group h1 {
+                font-size: 1.25rem;
+            }
+
+            .verse-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .verse-text {
+                font-size: 1.1rem;
+            }
+
+            .control-panel {
+                padding: 1rem;
+            }
+
+            .modal-body {
+                padding: 1rem;
+            }
+
+            .share-options-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .app-header,
+            .control-panel,
+            .action-buttons,
+            .stats-section,
+            .custom-section,
+            .rate-button {
+                display: none !important;
+            }
+
+            .verse-card {
+                box-shadow: none;
+                border: 1px solid #000;
             }
         }
     </style>
 </head>
-<body class="dark-mode">
+<body>
     <div class="app-container">
-        <!-- Rate Button -->
-        <button class="rate-button pulse" id="rateButton">
-            <i class="fas fa-star"></i> Rate VerseCurator
-        </button>
-
-        <!-- Rating Modal -->
-        <div class="rating-modal" id="ratingModal">
-            <div class="rating-content">
-                <h3>Rate VerseCurator</h3>
-                <p>How would you rate your experience with VerseCurator?</p>
-                <div class="rating-stars">
-                    <span class="rating-star" data-rating="1">★</span>
-                    <span class="rating-star" data-rating="2">★</span>
-                    <span class="rating-star" data-rating="3">★</span>
-                    <span class="rating-star" data-rating="4">★</span>
-                    <span class="rating-star" data-rating="5">★</span>
-                </div>
-                <textarea class="rating-comment" placeholder="Optional: Share your feedback..."></textarea>
-                <div class="rating-actions">
-                    <button class="rating-btn rating-cancel" id="ratingCancel">Cancel</button>
-                    <button class="rating-btn rating-submit" id="ratingSubmit">Submit Rating</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Warning Modal -->
-        <div class="warning-modal" id="warningModal">
-            <div class="warning-content">
-                <div class="warning-icon">
-                    <i class="fas fa-exclamation-triangle"></i>
-                </div>
-                <h3>Important Notice</h3>
-                <p>This is a demo version of VerseCurator. Some features may be limited in functionality.</p>
-                <div class="warning-actions">
-                    <button class="warning-btn warning-primary" id="warningContinue">Continue</button>
-                    <button class="warning-btn warning-outline" id="warningLearnMore">Learn More</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Schedule Modal -->
-        <div class="schedule-modal" id="scheduleModal">
-            <div class="schedule-content">
-                <h3>Schedule Verse Display</h3>
-                <p>Choose when to display this verse:</p>
-                <div class="schedule-options">
-                    <div class="schedule-option" data-time="now">Now</div>
-                    <div class="schedule-option" data-time="morning">Morning (5AM-12PM)</div>
-                    <div class="schedule-option" data-time="afternoon">Afternoon (12PM-6PM)</div>
-                    <div class="schedule-option" data-time="evening">Evening (6PM-10PM)</div>
-                    <div class="schedule-option" data-time="night">Night (10PM-5AM)</div>
-                    <div class="schedule-option" data-time="custom">Custom Time</div>
-                </div>
-                <div class="custom-time" id="customTimeInput" style="display: none;">
-                    <input type="time" class="time-input" id="customTime">
-                </div>
-                <div class="modal-actions">
-                    <button class="btn btn-secondary" id="scheduleCancel">Cancel</button>
-                    <button class="btn btn-primary" id="scheduleConfirm">Confirm</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Theme Selection Modal -->
-        <div class="modal" id="themeModal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3><i class="fas fa-palette"></i> Theme Selection</h3>
-                    <button class="modal-close" id="themeModalClose">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="theme-selection">
-                        <div class="theme-options">
-                            <label for="themeSelect">Select Theme:</label>
-                            <select id="themeSelect">
-                                <option value="classic">Classic</option>
-                                <option value="modern">Modern</option>
-                                <option value="minimal">Minimal</option>
-                                <option value="serene">Serene</option>
-                            </select>
-                        </div>
-                        <div class="theme-preview">
-                            <canvas id="themePreview" width="400" height="200"></canvas>
-                        </div>
-                        <div class="image-actions">
-                            <button class="share-action-btn" id="applyTheme">
-                                <i class="fas fa-check"></i> Apply Theme
-                            </button>
-                            <button class="share-action-btn" id="saveThemeImage">
-                                <i class="fas fa-download"></i> Save as Image
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- App Header -->
+        <!-- Header Section -->
         <header class="app-header">
             <div class="header-content">
                 <div class="logo-section">
                     <div class="logo">
-                        <i class="fas fa-book-bible"></i>
+                        <i class="fas fa-bible"></i>
                     </div>
                     <div class="title-group">
                         <h1>VerseCurator</h1>
-                        <div class="app-tagline">Curate • Share • Inspire</div>
+                        <div class="app-tagline">Daily Inspiration & Peace</div>
                         <div class="mode-indicator auto">
-                            <i class="fas fa-magic"></i> Auto - <span id="currentTimePeriod">🌙 Night</span>
-                            <span class="countdown" id="countdown">(Next: 5:00 AM)</span>
+                            Auto Mode <span class="countdown">(60s)</span>
                         </div>
                     </div>
                 </div>
                 <div class="header-controls">
-                    <div class="time-display" id="currentTime">10:45 PM</div>
-                    <div class="theme-toggle" id="themeToggle">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
+                    <div class="time-display">
+                        <div class="time-greeting">Good Morning</div>
+                        <div id="current-time">8:00 AM</div>
+                    </div>
+                    <div class="theme-toggle-container">
+                        <div class="theme-toggle" id="theme-toggle">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="theme-indicator">Dark</div>
                     </div>
                 </div>
             </div>
@@ -1736,27 +1701,22 @@
                 <div class="period active" data-period="morning">
                     <i class="fas fa-sun"></i>
                     <span>Morning</span>
-                    <small>5AM-12PM</small>
-                </div>
-                <div class="period" data-period="day">
-                    <i class="fas fa-cloud-sun"></i>
-                    <span>Day</span>
-                    <small>12PM-3PM</small>
+                    <small>6AM-12PM</small>
                 </div>
                 <div class="period" data-period="afternoon">
-                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-cloud-sun"></i>
                     <span>Afternoon</span>
-                    <small>3PM-6PM</small>
+                    <small>12PM-6PM</small>
                 </div>
                 <div class="period" data-period="evening">
-                    <i class="fas fa-cloud-moon"></i>
+                    <i class="fas fa-moon"></i>
                     <span>Evening</span>
-                    <small>6PM-10PM</small>
+                    <small>6PM-12AM</small>
                 </div>
                 <div class="period" data-period="night">
-                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-star"></i>
                     <span>Night</span>
-                    <small>10PM-5AM</small>
+                    <small>12AM-6AM</small>
                 </div>
             </div>
         </header>
@@ -1767,89 +1727,75 @@
             <section class="control-panel">
                 <div class="panel-grid">
                     <div class="control-group">
-                        <div class="control-label">
-                            <i class="fas fa-language"></i>
-                            <span>Translation</span>
-                        </div>
-                        <select class="control-select" id="translationSelect">
-                            <option value="ESV">ESV</option>
-                            <option value="NIV">NIV</option>
-                            <option value="KJV">KJV</option>
-                            <option value="NKJV">NKJV</option>
-                            <option value="NASB">NASB</option>
+                        <label for="verse-category" class="control-label">
+                            <i class="fas fa-layer-group"></i>
+                            Verse Category
+                        </label>
+                        <select id="verse-category" class="control-select">
+                            <option value="all">All Categories</option>
+                            <option value="encouragement">Encouragement</option>
+                            <option value="peace">Peace</option>
+                            <option value="hope">Hope</option>
+                            <option value="strength">Strength</option>
+                            <option value="faith">Faith</option>
+                            <option value="love">Love</option>
                         </select>
                     </div>
                     <div class="control-group">
-                        <div class="control-label">
-                            <i class="fas fa-desktop"></i>
-                            <span>Display Mode</span>
-                        </div>
-                        <select class="control-select" id="displayModeSelect">
-                            <option value="auto">Auto (Time-based)</option>
-                            <option value="manual">Manual</option>
-                        </select>
-                    </div>
-                    <div class="control-group">
-                        <div class="control-label">
-                            <i class="fas fa-paint-brush"></i>
-                            <span>Canvas Style</span>
-                        </div>
-                        <select class="control-select" id="canvasStyleSelect">
-                            <option value="classic">Classic</option>
-                            <option value="modern">Modern</option>
-                            <option value="minimal">Minimal</option>
-                            <option value="serene">Serene</option>
-                        </select>
-                    </div>
-                    <div class="control-group">
-                        <div class="control-label">
-                            <i class="fas fa-cog"></i>
-                            <span>App Mode</span>
-                        </div>
-                        <select class="control-select" id="appModeSelect">
-                            <option value="general">General</option>
-                            <option value="devotional">Devotional</option>
-                            <option value="study">Study</option>
-                            <option value="outreach">Outreach</option>
+                        <label for="translation" class="control-label">
+                            <i class="fas fa-book"></i>
+                            Translation
+                        </label>
+                        <select id="translation" class="control-select">
+                            <option value="niv">NIV</option>
+                            <option value="esv">ESV</option>
+                            <option value="kjv">KJV</option>
+                            <option value="nlt">NLT</option>
+                            <option value="nasb">NASB</option>
                         </select>
                     </div>
                 </div>
+                
                 <div class="occasion-settings">
-                    <div class="control-label">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Occasion Settings</span>
+                    <div class="control-group">
+                        <label for="special-occasion" class="control-label">
+                            <i class="fas fa-calendar-alt"></i>
+                            Special Occasion
+                        </label>
+                        <select id="special-occasion" class="control-select">
+                            <option value="none">No Special Occasion</option>
+                            <option value="christmas">Christmas</option>
+                            <option value="easter">Easter</option>
+                            <option value="thanksgiving">Thanksgiving</option>
+                            <option value="new-year">New Year</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="funeral">Funeral</option>
+                        </select>
                     </div>
-                    <select class="control-select" id="occasionSelect">
-                        <option value="none">No Special Occasion</option>
-                        <option value="easter">Easter</option>
-                        <option value="christmas">Christmas</option>
-                        <option value="thanksgiving">Thanksgiving</option>
-                        <option value="birthday">Birthday</option>
-                        <option value="wedding">Wedding</option>
-                    </select>
                 </div>
             </section>
 
             <!-- Verse Section -->
             <section class="verse-section">
-                <div class="verse-card">
+                <div class="verse-card fade-in">
                     <div class="verse-content">
                         <div class="verse-header">
-                            <div class="verse-time-badge" id="verseTimeBadge">🌅 Morning ESV</div>
-                            <div class="verse-translation-badge" id="verseTranslationBadge">ESV</div>
+                            <div class="verse-time-badge">Morning Verse</div>
+                            <div class="verse-translation-badge">NIV</div>
                         </div>
-                        <div class="verse-text" id="verseText">
-                            "When I remember you upon my bed, and meditate on you in the watches of the night."
+                        <div class="verse-text">
+                            "The Lord is my shepherd, I lack nothing. He makes me lie down in green pastures, he leads me beside quiet waters, he refreshes my soul."
                         </div>
-                        <div class="verse-reference" id="verseReference">Psalm 63:6</div>
+                        <div class="verse-reference">Psalm 23:1-3</div>
                         <div class="verse-actions">
-                            <button class="action-btn" id="favoriteBtn" title="Add to Favorites">
-                                <i class="far fa-heart"></i>
+                            <button class="action-btn" title="Copy Verse">
+                                <i class="fas fa-copy"></i>
                             </button>
-                            <button class="action-btn" id="copyBtn" title="Copy Verse">
-                                <i class="far fa-copy"></i>
+                            <button class="action-btn" title="Save Verse">
+                                <i class="fas fa-bookmark"></i>
                             </button>
-                            <button class="action-btn" id="speakBtn" title="Listen to Verse">
+                            <button class="action-btn" title="Speak Verse">
                                 <i class="fas fa-volume-up"></i>
                             </button>
                         </div>
@@ -1859,54 +1805,58 @@
                 <!-- Action Buttons -->
                 <div class="action-buttons">
                     <div class="action-buttons-row">
-                        <button class="btn btn-secondary" id="prevVerseBtn">
-                            <i class="fas fa-arrow-left"></i> Previous Verse
+                        <button class="btn btn-primary" id="share-verse-btn">
+                            <i class="fas fa-share-alt"></i>
+                            Share Verse
                         </button>
-                        <button class="btn btn-secondary" id="nextVerseBtn">
-                            Next Verse <i class="fas fa-arrow-right"></i>
+                        <button class="btn btn-secondary" id="prev-verse-btn">
+                            <i class="fas fa-arrow-left"></i>
+                            Previous
                         </button>
                     </div>
                     <div class="action-buttons-row">
-                        <button class="btn btn-primary" id="shareBtn">
-                            <i class="fas fa-share-alt"></i> Share
+                        <button class="btn btn-secondary" id="next-verse-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Next Verse
                         </button>
-                        <button class="btn btn-outline" id="setReminderBtn">
-                            <i class="fas fa-bell"></i> Set Reminder
+                        <button class="btn btn-outline" id="reminder-btn">
+                            <i class="fas fa-bell"></i>
+                            Set Reminder
                         </button>
                     </div>
                 </div>
             </section>
 
-            <!-- Statistics Section -->
+            <!-- Stats Section -->
             <section class="stats-section">
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-icon">
-                            <i class="fas fa-bell"></i>
-                        </div>
-                        <div class="stat-number" id="totalReminders">0</div>
-                        <div class="stat-label">Total Reminders</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <div class="stat-number" id="activeReminders">0</div>
-                        <div class="stat-label">Active</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-history"></i>
-                        </div>
-                        <div class="stat-number" id="completedReminders">0</div>
-                        <div class="stat-label">Completed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
                             <i class="fas fa-fire"></i>
                         </div>
-                        <div class="stat-number" id="dayStreak">0</div>
+                        <div class="stat-number">7</div>
                         <div class="stat-label">Day Streak</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-share"></i>
+                        </div>
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Verses Shared</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">Verses Read</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-number">4.8</div>
+                        <div class="stat-label">App Rating</div>
                     </div>
                 </div>
             </section>
@@ -1915,130 +1865,84 @@
             <section class="custom-section">
                 <div class="section-header">
                     <h3><i class="fas fa-plus-circle"></i> Custom Verses</h3>
-                    <button class="btn btn-outline" id="addCustomVerseBtn">
-                        <i class="fas fa-plus"></i> Add New
+                    <button class="btn btn-outline" id="add-custom-verse-btn">
+                        <i class="fas fa-plus"></i>
+                        Add Custom Verse
                     </button>
                 </div>
-                <div class="custom-form" id="customVerseForm" style="display: none;">
+
+                <div class="custom-form hidden" id="custom-verse-form">
                     <div class="form-grid">
-                        <input type="text" class="form-input" id="customVerseText" placeholder="Enter verse text...">
-                        <input type="text" class="form-input" id="customVerseReference" placeholder="Enter reference (e.g., John 3:16)">
-                        <select class="form-input" id="customVerseTranslation">
-                            <option value="ESV">ESV</option>
-                            <option value="NIV">NIV</option>
-                            <option value="KJV">KJV</option>
-                        </select>
-                        <div class="modal-actions">
-                            <button class="btn btn-secondary" id="cancelCustomVerse">Cancel</button>
-                            <button class="btn btn-primary" id="saveCustomVerse">Save Verse</button>
+                        <input type="text" class="form-input" placeholder="Verse Text" id="custom-verse-text">
+                        <input type="text" class="form-input" placeholder="Reference (e.g., John 3:16)" id="custom-verse-reference">
+                        <div class="action-buttons-row">
+                            <button class="btn btn-primary" id="save-custom-verse">Save Verse</button>
+                            <button class="btn btn-secondary" id="cancel-custom-verse">Cancel</button>
                         </div>
                     </div>
                 </div>
-                <div class="custom-verses-list" id="customVersesList">
-                    <div class="empty-history">
-                        <i class="fas fa-book-open" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-                        <p>No custom verses added yet</p>
-                    </div>
-                </div>
-            </section>
 
-            <!-- Collapsible Sections -->
-            <section class="collapsible-section">
-                <button class="collapsible-btn" id="reminderManagementBtn">
-                    <span><i class="fas fa-bell"></i> Reminder Management</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="collapsible-content" id="reminderManagementContent">
-                    <div class="reminder-list" id="activeRemindersList">
-                        <div class="empty-reminders">
-                            <i class="fas fa-bell-slash" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-                            <p>No active reminders</p>
+                <div class="custom-verses-list">
+                    <div class="custom-verse-item">
+                        <div class="verse-content">
+                            <strong>For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.</strong>
+                            <div class="verse-meta">
+                                <span>Jeremiah 29:11</span>
+                                <span>Added: Today</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-actions">
-                        <button class="btn btn-primary" id="addNewReminderBtn">
-                            <i class="fas fa-plus"></i> Add New Reminder
+                        <button class="delete-verse">
+                            <i class="fas fa-trash"></i>
                         </button>
                     </div>
                 </div>
             </section>
 
-            <section class="collapsible-section">
-                <button class="collapsible-btn" id="shareHistoryBtn">
-                    <span><i class="fas fa-history"></i> Share History</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="collapsible-content" id="shareHistoryContent">
-                    <div class="history-list" id="shareHistoryList">
-                        <div class="empty-history">
-                            <i class="fas fa-share-alt" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-                            <p>No share history yet</p>
-                        </div>
-                    </div>
-                    <div class="modal-actions">
-                        <button class="btn btn-secondary" id="clearShareHistoryBtn">
-                            <i class="fas fa-trash"></i> Clear All
-                        </button>
-                    </div>
+            <!-- Reminder Management Section -->
+            <section class="reminder-management">
+                <div class="section-header">
+                    <h3><i class="fas fa-bell"></i> Reminder Management</h3>
                 </div>
-            </section>
-
-            <section class="collapsible-section">
-                <button class="collapsible-btn" id="whatsappBroadcastBtn">
-                    <span><i class="fab fa-whatsapp"></i> WhatsApp Broadcast Assistant</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="collapsible-content" id="whatsappBroadcastContent">
-                    <div class="broadcast-section">
-                        <h4>Broadcast Guide</h4>
-                        <div class="broadcast-steps">
-                            <div class="broadcast-step">
-                                <div class="step-number">1</div>
-                                <div class="step-content">
-                                    <h4>Prepare Your Verse</h4>
-                                    <p>Copy the verse text with reference. Recipients will receive clean text with attribution.</p>
-                                    <button class="copy-btn" id="copyVerseForBroadcast">
-                                        <i class="far fa-copy"></i> "When I remember you upon my bed, and meditate on you in the watches of the night." - Psalm 63:6
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="broadcast-step">
-                                <div class="step-number">2</div>
-                                <div class="step-content">
-                                    <h4>Open WhatsApp Broadcast</h4>
-                                    <p>In WhatsApp, tap the three dots (⋮) → New broadcast</p>
-                                </div>
-                            </div>
-                            <div class="broadcast-step">
-                                <div class="step-number">3</div>
-                                <div class="step-content">
-                                    <h4>Select Recipients</h4>
-                                    <p>Choose up to 256 contacts from your phone's contact list</p>
-                                </div>
-                            </div>
-                            <div class="broadcast-step">
-                                <div class="step-number">4</div>
-                                <div class="step-content">
-                                    <h4>Paste and Send</h4>
-                                    <p>Paste the verse and add a personal message if desired. Send to all recipients at once.</p>
-                                </div>
+                
+                <div class="reminder-tabs">
+                    <button class="reminder-tab active" data-tab="active">Active Reminders</button>
+                    <button class="reminder-tab" data-tab="scheduled">Scheduled</button>
+                    <button class="reminder-tab" data-tab="history">History</button>
+                </div>
+                
+                <div class="reminder-list">
+                    <div class="reminder-item">
+                        <div class="reminder-content">
+                            <div class="reminder-title">Morning Inspiration</div>
+                            <div class="reminder-details">
+                                <span><i class="fas fa-clock"></i> Daily at 7:00 AM</span>
+                                <span><i class="fas fa-bible"></i> Psalm 23:1-3</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="contacts-section">
-                        <h4>Contact Management</h4>
-                        <div class="contacts-list" id="broadcastContactsList">
-                            <div class="empty-contacts">
-                                <i class="fas fa-users" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-                                <p>No contacts added</p>
-                            </div>
-                        </div>
-                        <div class="modal-actions">
-                            <button class="btn btn-outline" id="addContactBtn">
-                                <i class="fas fa-plus"></i> Add Contact
+                        <div class="reminder-actions">
+                            <button class="reminder-action-btn" title="Edit">
+                                <i class="fas fa-edit"></i>
                             </button>
-                            <button class="btn btn-secondary" id="importSampleContactsBtn">
-                                <i class="fas fa-download"></i> Import Sample
+                            <button class="reminder-action-btn delete" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="reminder-item">
+                        <div class="reminder-content">
+                            <div class="reminder-title">Evening Reflection</div>
+                            <div class="reminder-details">
+                                <span><i class="fas fa-clock"></i> Daily at 8:00 PM</span>
+                                <span><i class="fas fa-bible"></i> Philippians 4:6-7</span>
+                            </div>
+                        </div>
+                        <div class="reminder-actions">
+                            <button class="reminder-action-btn" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="reminder-action-btn delete" title="Delete">
+                                <i class="fas fa-trash"></i>
                             </button>
                         </div>
                     </div>
@@ -2047,1309 +1951,745 @@
         </main>
     </div>
 
+    <!-- Rate App Button -->
+    <button class="rate-button pulse" id="rate-app-btn">
+        <i class="fas fa-star"></i>
+        Rate App
+    </button>
+
     <!-- Share Modal -->
-    <div class="modal" id="shareModal">
+    <div class="modal" id="share-modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h3><i class="fas fa-share-alt"></i> Share Verse</h3>
-                <button class="modal-close" id="shareModalClose">&times;</button>
+                <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="share-type-selection">
-                    <button class="share-type-btn active" data-type="text">Text</button>
-                    <button class="share-type-btn" data-type="image">Image</button>
-                    <button class="share-type-btn" data-type="social">Social Media</button>
+                    <button class="share-type-btn active" data-share-type="verse">Share Verse</button>
+                    <button class="share-type-btn" data-share-type="app">Share App</button>
                 </div>
+                
                 <div class="share-options-grid">
-                    <div class="share-option" data-platform="whatsapp">
+                    <div class="share-option device-share">
+                        <div class="share-icon">
+                            <i class="fas fa-share-square"></i>
+                        </div>
+                        <span>Device Share</span>
+                    </div>
+                    <div class="share-option whatsapp">
                         <div class="share-icon">
                             <i class="fab fa-whatsapp"></i>
                         </div>
                         <span>WhatsApp</span>
                     </div>
-                    <div class="share-option" data-platform="facebook">
+                    <div class="share-option facebook">
                         <div class="share-icon">
-                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-facebook-f"></i>
                         </div>
                         <span>Facebook</span>
                     </div>
-                    <div class="share-option" data-platform="twitter">
+                    <div class="share-option twitter">
                         <div class="share-icon">
                             <i class="fab fa-twitter"></i>
                         </div>
                         <span>Twitter</span>
                     </div>
-                    <div class="share-option" data-platform="instagram">
+                    <div class="share-option telegram">
                         <div class="share-icon">
-                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-telegram"></i>
                         </div>
-                        <span>Instagram</span>
+                        <span>Telegram</span>
                     </div>
-                    <div class="share-option" data-platform="email">
+                    <div class="share-option email">
                         <div class="share-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <span>Email</span>
                     </div>
-                    <div class="share-option" data-platform="sms">
+                    <div class="share-option sms">
                         <div class="share-icon">
                             <i class="fas fa-sms"></i>
                         </div>
                         <span>SMS</span>
                     </div>
-                    <div class="share-option device-share" data-platform="device">
-                        <div class="share-icon">
-                            <i class="fas fa-share-alt"></i>
-                        </div>
-                        <span>Device Share</span>
-                    </div>
-                    <div class="share-option share-with-link" data-platform="link">
+                    <div class="share-option share-with-link">
                         <div class="share-icon">
                             <i class="fas fa-link"></i>
                         </div>
                         <span>Copy Link</span>
                     </div>
                 </div>
+                
+                <div class="contact-section mt-2">
+                    <h4 class="mb-1">Share with Contacts</h4>
+                    <div class="add-contact-form">
+                        <div class="form-row">
+                            <input type="text" class="form-input" placeholder="Contact Name" id="contact-name">
+                            <input type="tel" class="form-input" placeholder="Phone Number" id="contact-number">
+                            <button class="btn btn-primary" id="add-contact-btn">Add</button>
+                        </div>
+                    </div>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-info">
+                                <div class="contact-name">John Smith</div>
+                                <div class="contact-number">+1 (555) 123-4567</div>
+                            </div>
+                            <div class="contact-actions">
+                                <button class="contact-action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="contact-action-btn delete" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Set Reminder Modal -->
-    <div class="modal" id="reminderModal">
+    <!-- Reminder Modal -->
+    <div class="modal" id="reminder-modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h3><i class="fas fa-bell"></i> Set Reminder</h3>
-                <button class="modal-close" id="reminderModalClose">&times;</button>
+                <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="form-grid">
-                    <input type="text" class="form-input" id="reminderTitle" placeholder="Reminder title (optional)" value="Read Bible Verse">
-                    <textarea class="form-input" id="reminderNote" placeholder="Add a note (optional)">Remember to read and reflect on today's verse.</textarea>
-                    <input type="datetime-local" class="form-input" id="reminderDateTime">
-                    <select class="form-input" id="reminderRepeat">
-                        <option value="none">Does not repeat</option>
-                        <option value="daily">Daily</option>
-                        <option value="weekly">Weekly</option>
-                        <option value="weekdays">Weekdays</option>
-                        <option value="weekends">Weekends</option>
-                    </select>
+                <div class="reminder-options">
+                    <div class="schedule-option active">
+                        <i class="fas fa-sun"></i>
+                        <div>Daily Morning</div>
+                        <small>7:00 AM</small>
+                    </div>
+                    <div class="schedule-option">
+                        <i class="fas fa-moon"></i>
+                        <div>Daily Evening</div>
+                        <small>8:00 PM</small>
+                    </div>
+                    <div class="schedule-option">
+                        <i class="fas fa-calendar"></i>
+                        <div>Custom Time</div>
+                        <small>Set your own time</small>
+                    </div>
                 </div>
-                <div class="modal-actions">
-                    <button class="btn btn-secondary" id="reminderCancel">Cancel</button>
-                    <button class="btn btn-primary" id="reminderSave">Save Reminder</button>
+                
+                <div class="custom-time mt-2">
+                    <input type="time" class="time-input" id="custom-reminder-time">
+                </div>
+                
+                <div class="action-buttons mt-2">
+                    <button class="btn btn-primary" id="save-reminder-btn">
+                        <i class="fas fa-bell"></i>
+                        Set Reminder
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Add Contact Modal -->
-    <div class="modal" id="contactModal">
+    <!-- Stats Modal -->
+    <div class="modal" id="stats-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3><i class="fas fa-user-plus"></i> Add Contact</h3>
-                <button class="modal-close" id="contactModalClose">&times;</button>
+                <h3><i class="fas fa-chart-bar"></i> Your Statistics</h3>
+                <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="form-grid">
-                    <input type="text" class="form-input" id="contactName" placeholder="Contact Name">
-                    <input type="tel" class="form-input" id="contactPhone" placeholder="Phone Number">
-                    <input type="email" class="form-input" id="contactEmail" placeholder="Email (optional)">
-                    <select class="form-input" id="contactGroup">
-                        <option value="general">General</option>
-                        <option value="family">Family</option>
-                        <option value="friends">Friends</option>
-                        <option value="church">Church</option>
-                    </select>
+                <div class="stats-grid-modal">
+                    <div class="stat-card-modal">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">Day Streak</div>
+                    </div>
+                    <div class="stat-card-modal">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Verses Shared</div>
+                    </div>
+                    <div class="stat-card-modal">
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">Verses Read</div>
+                    </div>
+                    <div class="stat-card-modal">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Custom Verses</div>
+                    </div>
+                    <div class="stat-card-modal">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Active Reminders</div>
+                    </div>
+                    <div class="stat-card-modal">
+                        <div class="stat-number">4.8</div>
+                        <div class="stat-label">App Rating</div>
+                    </div>
                 </div>
-                <div class="modal-actions">
-                    <button class="btn btn-secondary" id="contactCancel">Cancel</button>
-                    <button class="btn btn-primary" id="contactSave">Save Contact</button>
+                
+                <div class="share-history mt-2">
+                    <h4 class="mb-1">Recent Shares</h4>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-info">
+                                <div class="contact-name">Psalm 23:1-3</div>
+                                <div class="contact-number">Shared with John Smith • Today</div>
+                            </div>
+                            <div class="contact-actions">
+                                <button class="contact-action-btn" title="Reshare">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Notification -->
-    <div class="notification" id="notification" style="display: none;"></div>
+    <!-- Rating Modal -->
+    <div class="rating-modal" id="rating-modal">
+        <div class="rating-content">
+            <h3>Rate VerseCurator</h3>
+            <p>How would you rate your experience with our app?</p>
+            
+            <div class="rating-stars">
+                <span class="rating-star" data-rating="1">★</span>
+                <span class="rating-star" data-rating="2">★</span>
+                <span class="rating-star" data-rating="3">★</span>
+                <span class="rating-star" data-rating="4">★</span>
+                <span class="rating-star" data-rating="5">★</span>
+            </div>
+            
+            <textarea class="rating-comment" placeholder="Optional: Share your feedback..."></textarea>
+            
+            <div class="rating-actions">
+                <button class="rating-btn rating-cancel" id="rating-cancel">Cancel</button>
+                <button class="rating-btn rating-submit" id="rating-submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Warning Modal -->
+    <div class="warning-modal" id="warning-modal">
+        <div class="warning-content">
+            <div class="warning-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h3>Platform Limitation</h3>
+            <p>Some features may not work properly on this platform. For the best experience, please use the native app version.</p>
+            
+            <div class="warning-actions">
+                <button class="warning-btn warning-primary" id="warning-understand">I Understand</button>
+                <button class="warning-btn warning-outline" id="warning-learn-more">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
 
     <script>
         // DOM Elements
-        const rateButton = document.getElementById('rateButton');
-        const ratingModal = document.getElementById('ratingModal');
-        const ratingStars = document.querySelectorAll('.rating-star');
-        const ratingSubmit = document.getElementById('ratingSubmit');
-        const ratingCancel = document.getElementById('ratingCancel');
-        const warningModal = document.getElementById('warningModal');
-        const warningContinue = document.getElementById('warningContinue');
-        const warningLearnMore = document.getElementById('warningLearnMore');
-        const themeToggle = document.getElementById('themeToggle');
-        const translationSelect = document.getElementById('translationSelect');
-        const displayModeSelect = document.getElementById('displayModeSelect');
-        const canvasStyleSelect = document.getElementById('canvasStyleSelect');
-        const appModeSelect = document.getElementById('appModeSelect');
-        const occasionSelect = document.getElementById('occasionSelect');
-        const verseText = document.getElementById('verseText');
-        const verseReference = document.getElementById('verseReference');
-        const verseTimeBadge = document.getElementById('verseTimeBadge');
-        const verseTranslationBadge = document.getElementById('verseTranslationBadge');
-        const favoriteBtn = document.getElementById('favoriteBtn');
-        const copyBtn = document.getElementById('copyBtn');
-        const speakBtn = document.getElementById('speakBtn');
-        const prevVerseBtn = document.getElementById('prevVerseBtn');
-        const nextVerseBtn = document.getElementById('nextVerseBtn');
-        const shareBtn = document.getElementById('shareBtn');
-        const setReminderBtn = document.getElementById('setReminderBtn');
-        const shareModal = document.getElementById('shareModal');
-        const shareModalClose = document.getElementById('shareModalClose');
-        const shareOptions = document.querySelectorAll('.share-option');
-        const reminderModal = document.getElementById('reminderModal');
-        const reminderModalClose = document.getElementById('reminderModalClose');
-        const reminderCancel = document.getElementById('reminderCancel');
-        const reminderSave = document.getElementById('reminderSave');
-        const addCustomVerseBtn = document.getElementById('addCustomVerseBtn');
-        const customVerseForm = document.getElementById('customVerseForm');
-        const cancelCustomVerse = document.getElementById('cancelCustomVerse');
-        const saveCustomVerse = document.getElementById('saveCustomVerse');
-        const customVersesList = document.getElementById('customVersesList');
-        const reminderManagementBtn = document.getElementById('reminderManagementBtn');
-        const reminderManagementContent = document.getElementById('reminderManagementContent');
-        const shareHistoryBtn = document.getElementById('shareHistoryBtn');
-        const shareHistoryContent = document.getElementById('shareHistoryContent');
-        const whatsappBroadcastBtn = document.getElementById('whatsappBroadcastBtn');
-        const whatsappBroadcastContent = document.getElementById('whatsappBroadcastContent');
-        const addNewReminderBtn = document.getElementById('addNewReminderBtn');
-        const clearShareHistoryBtn = document.getElementById('clearShareHistoryBtn');
-        const copyVerseForBroadcast = document.getElementById('copyVerseForBroadcast');
-        const addContactBtn = document.getElementById('addContactBtn');
-        const importSampleContactsBtn = document.getElementById('importSampleContactsBtn');
-        const contactModal = document.getElementById('contactModal');
-        const contactModalClose = document.getElementById('contactModalClose');
-        const contactCancel = document.getElementById('contactCancel');
-        const contactSave = document.getElementById('contactSave');
-        const broadcastContactsList = document.getElementById('broadcastContactsList');
-        const activeRemindersList = document.getElementById('activeRemindersList');
-        const shareHistoryList = document.getElementById('shareHistoryList');
-        const notification = document.getElementById('notification');
-        const currentTimeElement = document.getElementById('currentTime');
-        const currentTimePeriod = document.getElementById('currentTimePeriod');
-        const countdown = document.getElementById('countdown');
-        const totalReminders = document.getElementById('totalReminders');
-        const activeReminders = document.getElementById('activeReminders');
-        const completedReminders = document.getElementById('completedReminders');
-        const dayStreak = document.getElementById('dayStreak');
-        const scheduleModal = document.getElementById('scheduleModal');
+        const themeToggle = document.getElementById('theme-toggle');
+        const shareModal = document.getElementById('share-modal');
+        const reminderModal = document.getElementById('reminder-modal');
+        const statsModal = document.getElementById('stats-modal');
+        const ratingModal = document.getElementById('rating-modal');
+        const warningModal = document.getElementById('warning-modal');
+        const toast = document.getElementById('toast');
+        const rateAppBtn = document.getElementById('rate-app-btn');
+        const customVerseForm = document.getElementById('custom-verse-form');
+        const addCustomVerseBtn = document.getElementById('add-custom-verse-btn');
+        const saveCustomVerseBtn = document.getElementById('save-custom-verse');
+        const cancelCustomVerseBtn = document.getElementById('cancel-custom-verse');
+        const shareVerseBtn = document.getElementById('share-verse-btn');
+        const reminderBtn = document.getElementById('reminder-btn');
+        const prevVerseBtn = document.getElementById('prev-verse-btn');
+        const nextVerseBtn = document.getElementById('next-verse-btn');
+        const modalCloses = document.querySelectorAll('.modal-close');
+        const timePeriods = document.querySelectorAll('.period');
+        const shareTypeBtns = document.querySelectorAll('.share-type-btn');
+        const reminderTabs = document.querySelectorAll('.reminder-tab');
         const scheduleOptions = document.querySelectorAll('.schedule-option');
-        const scheduleCancel = document.getElementById('scheduleCancel');
-        const scheduleConfirm = document.getElementById('scheduleConfirm');
-        const customTimeInput = document.getElementById('customTimeInput');
-        const customTime = document.getElementById('customTime');
-        const themeModal = document.getElementById('themeModal');
-        const themeModalClose = document.getElementById('themeModalClose');
-        const themeSelect = document.getElementById('themeSelect');
-        const themePreview = document.getElementById('themePreview');
-        const applyTheme = document.getElementById('applyTheme');
-        const saveThemeImage = document.getElementById('saveThemeImage');
-        const shareTypeButtons = document.querySelectorAll('.share-type-btn');
-        const periods = document.querySelectorAll('.period');
+        const ratingStars = document.querySelectorAll('.rating-star');
+        const ratingSubmit = document.getElementById('rating-submit');
+        const ratingCancel = document.getElementById('rating-cancel');
+        const warningUnderstand = document.getElementById('warning-understand');
+        const warningLearnMore = document.getElementById('warning-learn-more');
+        const addContactBtn = document.getElementById('add-contact-btn');
+        const saveReminderBtn = document.getElementById('save-reminder-btn');
+        const modeIndicator = document.querySelector('.mode-indicator');
+        const countdownElement = document.querySelector('.countdown');
 
         // App State
-        let appState = {
-            currentVerse: {
-                text: '"When I remember you upon my bed, and meditate on you in the watches of the night."',
-                reference: 'Psalm 63:6',
-                translation: 'ESV',
-                timePeriod: 'night'
-            },
-            favorites: [],
-            customVerses: [],
-            reminders: [],
-            shareHistory: [],
-            contacts: [],
-            statistics: {
-                totalReminders: 0,
-                activeReminders: 0,
-                completedReminders: 0,
-                dayStreak: 0,
-                viewed: 2,
-                shared: 0,
-                favorites: 0
-            },
-            settings: {
-                theme: 'dark',
-                translation: 'ESV',
-                displayMode: 'auto',
-                canvasStyle: 'classic',
-                appMode: 'general',
-                occasion: 'none'
-            },
-            rating: {
-                showButton: true,
-                submitted: false
-            }
-        };
+        let currentTheme = localStorage.getItem('theme') || 'light';
+        let currentVerseIndex = 0;
+        let currentPeriod = 'morning';
+        let currentShareType = 'verse';
+        let currentReminderTab = 'active';
+        let selectedRating = 0;
+        let countdownTimer = null;
+        let countdownSeconds = 60;
 
-        // Bible Verses Database
-        const bibleVerses = {
+        // Sample Data
+        const verses = {
             morning: [
-                { text: '"The steadfast love of the Lord never ceases; his mercies never come to an end; they are new every morning; great is your faithfulness."', reference: 'Lamentations 3:22-23', translation: 'ESV' },
-                { text: '"Satisfy us in the morning with your steadfast love, that we may rejoice and be glad all our days."', reference: 'Psalm 90:14', translation: 'ESV' },
-                { text: '"Let me hear in the morning of your steadfast love, for in you I trust. Make me know the way I should go, for to you I lift up my soul."', reference: 'Psalm 143:8', translation: 'ESV' }
-            ],
-            day: [
-                { text: '"The Lord is my shepherd; I shall not want. He makes me lie down in green pastures. He leads me beside still waters."', reference: 'Psalm 23:1-2', translation: 'ESV' },
-                { text: '"But I will sing of your strength; I will sing aloud of your steadfast love in the morning. For you have been to me a fortress and a refuge in the day of my distress."', reference: 'Psalm 59:16', translation: 'ESV' },
-                { text: '"The Lord is my light and my salvation; whom shall I fear? The Lord is the stronghold of my life; of whom shall I be afraid?"', reference: 'Psalm 27:1', translation: 'ESV' }
+                {
+                    text: '"The Lord is my shepherd, I lack nothing. He makes me lie down in green pastures, he leads me beside quiet waters, he refreshes my soul."',
+                    reference: 'Psalm 23:1-3',
+                    translation: 'NIV'
+                },
+                {
+                    text: '"This is the day that the Lord has made; let us rejoice and be glad in it."',
+                    reference: 'Psalm 118:24',
+                    translation: 'ESV'
+                }
             ],
             afternoon: [
-                { text: '"Come to me, all who labor and are heavy laden, and I will give you rest."', reference: 'Matthew 11:28', translation: 'ESV' },
-                { text: '"But they who wait for the Lord shall renew their strength; they shall mount up with wings like eagles; they shall run and not be weary; they shall walk and not faint."', reference: 'Isaiah 40:31', translation: 'ESV' },
-                { text: '"I can do all things through him who strengthens me."', reference: 'Philippians 4:13', translation: 'ESV' }
+                {
+                    text: '"I can do all things through him who strengthens me."',
+                    reference: 'Philippians 4:13',
+                    translation: 'ESV'
+                }
             ],
             evening: [
-                { text: '"In peace I will both lie down and sleep; for you alone, O Lord, make me dwell in safety."', reference: 'Psalm 4:8', translation: 'ESV' },
-                { text: '"It is in vain that you rise up early and go late to rest, eating the bread of anxious toil; for he gives to his beloved sleep."', reference: 'Psalm 127:2', translation: 'ESV' },
-                { text: '"When you lie down, you will not be afraid; when you lie down, your sleep will be sweet."', reference: 'Proverbs 3:24', translation: 'ESV' }
+                {
+                    text: '"Be still, and know that I am God. I will be exalted among the nations, I will be exalted in the earth!"',
+                    reference: 'Psalm 46:10',
+                    translation: 'ESV'
+                }
             ],
             night: [
-                { text: '"When I remember you upon my bed, and meditate on you in the watches of the night."', reference: 'Psalm 63:6', translation: 'ESV' },
-                { text: '"Be still, and know that I am God. I will be exalted among the nations, I will be exalted in the earth!"', reference: 'Psalm 46:10', translation: 'ESV' },
-                { text: '"The Lord will keep your going out and your coming in from this time forth and forevermore."', reference: 'Psalm 121:8', translation: 'ESV' }
+                {
+                    text: '"When I lie down, I go to sleep in peace; you alone, O Lord, keep me perfectly safe."',
+                    reference: 'Psalm 4:8',
+                    translation: 'GNT'
+                }
             ]
         };
 
-        // Initialize the app
+        // Initialize App
         function initApp() {
-            loadAppState();
-            updateUI();
+            applyTheme(currentTheme);
+            updateTimeGreeting();
+            updateVerse();
             setupEventListeners();
-            updateTime();
-            setInterval(updateTime, 60000); // Update time every minute
-            
-            // Show warning modal on first load
-            setTimeout(() => {
-                warningModal.style.display = 'block';
-            }, 1000);
+            startCountdownTimer();
             
             // Show rate button after 30 seconds
             setTimeout(() => {
-                if (appState.rating.showButton && !appState.rating.submitted) {
-                    rateButton.style.display = 'block';
-                }
+                rateAppBtn.style.display = 'block';
             }, 30000);
         }
 
-        // Load app state from localStorage
-        function loadAppState() {
-            const savedState = localStorage.getItem('verseCuratorState');
-            if (savedState) {
-                appState = { ...appState, ...JSON.parse(savedState) };
-            }
-        }
-
-        // Save app state to localStorage
-        function saveAppState() {
-            localStorage.setItem('verseCuratorState', JSON.stringify(appState));
-        }
-
-        // Update UI based on app state
-        function updateUI() {
-            // Update verse display
-            verseText.textContent = appState.currentVerse.text;
-            verseReference.textContent = appState.currentVerse.reference;
-            verseTranslationBadge.textContent = appState.currentVerse.translation;
-            
-            // Update time period badge
-            const timePeriod = appState.currentVerse.timePeriod;
-            const timeIcons = {
-                morning: '🌅',
-                day: '☀️',
-                afternoon: '🌇',
-                evening: '🌆',
-                night: '🌙'
-            };
-            verseTimeBadge.textContent = `${timeIcons[timePeriod]} ${capitalizeFirstLetter(timePeriod)} ${appState.currentVerse.translation}`;
-            
-            // Update settings controls
-            translationSelect.value = appState.settings.translation;
-            displayModeSelect.value = appState.settings.displayMode;
-            canvasStyleSelect.value = appState.settings.canvasStyle;
-            appModeSelect.value = appState.settings.appMode;
-            occasionSelect.value = appState.settings.occasion;
-            
-            // Update statistics
-            totalReminders.textContent = appState.statistics.totalReminders;
-            activeReminders.textContent = appState.statistics.activeReminders;
-            completedReminders.textContent = appState.statistics.completedReminders;
-            dayStreak.textContent = appState.statistics.dayStreak;
-            
-            // Update custom verses list
-            updateCustomVersesList();
-            
-            // Update reminders list
-            updateRemindersList();
-            
-            // Update share history
-            updateShareHistory();
-            
-            // Update contacts list
-            updateContactsList();
-            
-            // Update theme
-            document.body.classList.toggle('dark-mode', appState.settings.theme === 'dark');
-            
-            // Update active time period
-            updateActiveTimePeriod();
-        }
-
-        // Update active time period indicator
-        function updateActiveTimePeriod() {
-            const currentPeriod = appState.currentVerse.timePeriod;
-            periods.forEach(period => {
-                period.classList.toggle('active', period.dataset.period === currentPeriod);
-            });
-        }
-
-        // Update time display
-        function updateTime() {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            currentTimeElement.textContent = timeString;
-            
-            // Calculate next time period
-            const hours = now.getHours();
-            let nextPeriod, nextTime;
-            
-            if (hours < 5) {
-                nextPeriod = 'morning';
-                nextTime = '5:00 AM';
-            } else if (hours < 12) {
-                nextPeriod = 'day';
-                nextTime = '12:00 PM';
-            } else if (hours < 15) {
-                nextPeriod = 'afternoon';
-                nextTime = '3:00 PM';
-            } else if (hours < 18) {
-                nextPeriod = 'evening';
-                nextTime = '6:00 PM';
-            } else if (hours < 22) {
-                nextPeriod = 'night';
-                nextTime = '10:00 PM';
-            } else {
-                nextPeriod = 'morning';
-                nextTime = '5:00 AM';
-            }
-            
-            countdown.textContent = `(Next: ${nextTime})`;
-            
-            // Update current time period if in auto mode
-            if (appState.settings.displayMode === 'auto') {
-                let currentPeriod;
-                if (hours >= 5 && hours < 12) currentPeriod = 'morning';
-                else if (hours >= 12 && hours < 15) currentPeriod = 'day';
-                else if (hours >= 15 && hours < 18) currentPeriod = 'afternoon';
-                else if (hours >= 18 && hours < 22) currentPeriod = 'evening';
-                else currentPeriod = 'night';
-                
-                if (currentPeriod !== appState.currentVerse.timePeriod) {
-                    setRandomVerseForTimePeriod(currentPeriod);
-                }
-                
-                currentTimePeriod.textContent = `${timeIcons[currentPeriod]} ${capitalizeFirstLetter(currentPeriod)}`;
-            }
-        }
-
-        // Set random verse for time period
-        function setRandomVerseForTimePeriod(timePeriod) {
-            const verses = bibleVerses[timePeriod];
-            if (verses && verses.length > 0) {
-                const randomIndex = Math.floor(Math.random() * verses.length);
-                appState.currentVerse = {
-                    ...verses[randomIndex],
-                    timePeriod: timePeriod
-                };
-                updateUI();
-                saveAppState();
-            }
-        }
-
-        // Update custom verses list
-        function updateCustomVersesList() {
-            if (appState.customVerses.length === 0) {
-                customVersesList.innerHTML = `
-                    <div class="empty-history">
-                        <i class="fas fa-book-open" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-                        <p>No custom verses added yet</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            customVersesList.innerHTML = appState.customVerses.map((verse, index) => `
-                <div class="custom-verse-item">
-                    <div class="verse-content">
-                        <strong>${verse.text}</strong>
-                        <div class="verse-meta">
-                            <span>${verse.reference}</span>
-                            <span>${verse.translation}</span>
-                        </div>
-                    </div>
-                    <button class="delete-verse" data-index="${index}">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </div>
-            `).join('');
-            
-            // Add event listeners to delete buttons
-            document.querySelectorAll('.delete-verse').forEach(button => {
-                button.addEventListener('click', function() {
-                    const index = parseInt(this.dataset.index);
-                    appState.customVerses.splice(index, 1);
-                    updateCustomVersesList();
-                    saveAppState();
-                    showNotification('Custom verse deleted', 'success');
-                });
-            });
-        }
-
-        // Update reminders list
-        function updateRemindersList() {
-            const activeReminders = appState.reminders.filter(reminder => !reminder.completed);
-            
-            if (activeReminders.length === 0) {
-                activeRemindersList.innerHTML = `
-                    <div class="empty-reminders">
-                        <i class="fas fa-bell-slash" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-                        <p>No active reminders</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            activeRemindersList.innerHTML = activeReminders.map((reminder, index) => `
-                <div class="reminder-item">
-                    <div class="reminder-content">
-                        <div class="reminder-title">${reminder.title}</div>
-                        <div class="reminder-details">
-                            <span><i class="far fa-clock"></i> ${formatDateTime(reminder.dateTime)}</span>
-                            <span><i class="fas fa-redo"></i> ${reminder.repeat === 'none' ? 'No repeat' : capitalizeFirstLetter(reminder.repeat)}</span>
-                        </div>
-                    </div>
-                    <div class="reminder-actions">
-                        <button class="reminder-action-btn complete" data-id="${reminder.id}">
-                            <i class="fas fa-check"></i>
-                        </button>
-                        <button class="reminder-action-btn delete" data-id="${reminder.id}">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-            `).join('');
-            
-            // Add event listeners to reminder action buttons
-            document.querySelectorAll('.reminder-action-btn.complete').forEach(button => {
-                button.addEventListener('click', function() {
-                    const id = this.dataset.id;
-                    completeReminder(id);
-                });
-            });
-            
-            document.querySelectorAll('.reminder-action-btn.delete').forEach(button => {
-                button.addEventListener('click', function() {
-                    const id = this.dataset.id;
-                    deleteReminder(id);
-                });
-            });
-        }
-
-        // Update share history
-        function updateShareHistory() {
-            if (appState.shareHistory.length === 0) {
-                shareHistoryList.innerHTML = `
-                    <div class="empty-history">
-                        <i class="fas fa-share-alt" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-                        <p>No share history yet</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            shareHistoryList.innerHTML = appState.shareHistory.slice(0, 10).map(share => `
-                <div class="history-item">
-                    <div class="history-content">
-                        <div class="history-verse">${share.verse}</div>
-                        <div class="history-details">
-                            <span class="history-platform">
-                                <i class="fas fa-${getPlatformIcon(share.platform)}"></i> ${share.platform}
-                            </span>
-                            <span><i class="far fa-clock"></i> ${formatDateTime(share.timestamp)}</span>
-                        </div>
-                    </div>
-                    <div class="history-actions">
-                        <button class="history-action-btn reshare" data-verse="${share.verse}" data-reference="${share.reference}">
-                            <i class="fas fa-share"></i>
-                        </button>
-                    </div>
-                </div>
-            `).join('');
-            
-            // Add event listeners to reshare buttons
-            document.querySelectorAll('.history-action-btn.reshare').forEach(button => {
-                button.addEventListener('click', function() {
-                    const verse = this.dataset.verse;
-                    const reference = this.dataset.reference;
-                    appState.currentVerse.text = verse;
-                    appState.currentVerse.reference = reference;
-                    updateUI();
-                    shareModal.style.display = 'flex';
-                });
-            });
-        }
-
-        // Update contacts list
-        function updateContactsList() {
-            if (appState.contacts.length === 0) {
-                broadcastContactsList.innerHTML = `
-                    <div class="empty-contacts">
-                        <i class="fas fa-users" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-                        <p>No contacts added</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            broadcastContactsList.innerHTML = appState.contacts.map(contact => `
-                <div class="contact-item">
-                    <div class="contact-info">
-                        <div class="contact-avatar">${contact.name.charAt(0)}</div>
-                        <div class="contact-details">
-                            <h4>${contact.name}</h4>
-                            <p>${contact.phone}</p>
-                        </div>
-                    </div>
-                    <div class="contact-actions">
-                        <button class="contact-action-btn edit" data-id="${contact.id}">
-                            <i class="fas fa-edit"></i>
-                        </button>
-                        <button class="contact-action-btn delete" data-id="${contact.id}">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-            `).join('');
-            
-            // Add event listeners to contact action buttons
-            document.querySelectorAll('.contact-action-btn.edit').forEach(button => {
-                button.addEventListener('click', function() {
-                    const id = this.dataset.id;
-                    editContact(id);
-                });
-            });
-            
-            document.querySelectorAll('.contact-action-btn.delete').forEach(button => {
-                button.addEventListener('click', function() {
-                    const id = this.dataset.id;
-                    deleteContact(id);
-                });
-            });
-        }
-
-        // Setup event listeners
+        // Setup Event Listeners
         function setupEventListeners() {
-            // Theme toggle
+            // Theme Toggle
             themeToggle.addEventListener('click', toggleTheme);
             
-            // Settings controls
-            translationSelect.addEventListener('change', function() {
-                appState.settings.translation = this.value;
-                updateUI();
-                saveAppState();
-            });
+            // Modal Controls
+            shareVerseBtn.addEventListener('click', () => openModal(shareModal));
+            reminderBtn.addEventListener('click', () => openModal(reminderModal));
+            rateAppBtn.addEventListener('click', () => openModal(ratingModal));
             
-            displayModeSelect.addEventListener('change', function() {
-                appState.settings.displayMode = this.value;
-                updateUI();
-                saveAppState();
-            });
-            
-            canvasStyleSelect.addEventListener('change', function() {
-                appState.settings.canvasStyle = this.value;
-                updateUI();
-                saveAppState();
-            });
-            
-            appModeSelect.addEventListener('change', function() {
-                appState.settings.appMode = this.value;
-                updateUI();
-                saveAppState();
-            });
-            
-            occasionSelect.addEventListener('change', function() {
-                appState.settings.occasion = this.value;
-                updateUI();
-                saveAppState();
-            });
-            
-            // Verse actions
-            favoriteBtn.addEventListener('click', toggleFavorite);
-            copyBtn.addEventListener('click', copyVerse);
-            speakBtn.addEventListener('click', speakVerse);
+            // Verse Navigation
             prevVerseBtn.addEventListener('click', showPreviousVerse);
             nextVerseBtn.addEventListener('click', showNextVerse);
-            shareBtn.addEventListener('click', () => shareModal.style.display = 'flex');
-            setReminderBtn.addEventListener('click', () => reminderModal.style.display = 'flex');
             
-            // Share modal
-            shareModalClose.addEventListener('click', () => shareModal.style.display = 'none');
-            shareOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    const platform = this.dataset.platform;
-                    shareVerse(platform);
+            // Custom Verses
+            addCustomVerseBtn.addEventListener('click', toggleCustomVerseForm);
+            saveCustomVerseBtn.addEventListener('click', saveCustomVerse);
+            cancelCustomVerseBtn.addEventListener('click', toggleCustomVerseForm);
+            
+            // Time Periods
+            timePeriods.forEach(period => {
+                period.addEventListener('click', () => {
+                    const periodType = period.dataset.period;
+                    selectTimePeriod(periodType);
+                    startCountdownTimer();
                 });
             });
             
-            // Share type selection
-            shareTypeButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    shareTypeButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    // In a real app, you would update the share options based on type
+            // Share Type Selection
+            shareTypeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const shareType = btn.dataset.shareType;
+                    selectShareType(btn, shareType);
                 });
             });
             
-            // Reminder modal
-            reminderModalClose.addEventListener('click', () => reminderModal.style.display = 'none');
-            reminderCancel.addEventListener('click', () => reminderModal.style.display = 'none');
-            reminderSave.addEventListener('click', saveReminder);
-            
-            // Custom verses
-            addCustomVerseBtn.addEventListener('click', () => customVerseForm.style.display = 'block');
-            cancelCustomVerse.addEventListener('click', () => customVerseForm.style.display = 'none');
-            saveCustomVerse.addEventListener('click', saveCustomVerseHandler);
-            
-            // Collapsible sections
-            reminderManagementBtn.addEventListener('click', toggleCollapsible.bind(null, reminderManagementBtn, reminderManagementContent));
-            shareHistoryBtn.addEventListener('click', toggleCollapsible.bind(null, shareHistoryBtn, shareHistoryContent));
-            whatsappBroadcastBtn.addEventListener('click', toggleCollapsible.bind(null, whatsappBroadcastBtn, whatsappBroadcastContent));
-            
-            // Additional buttons
-            addNewReminderBtn.addEventListener('click', () => reminderModal.style.display = 'flex');
-            clearShareHistoryBtn.addEventListener('click', clearShareHistory);
-            copyVerseForBroadcast.addEventListener('click', copyVerseForBroadcastHandler);
-            addContactBtn.addEventListener('click', () => contactModal.style.display = 'flex');
-            importSampleContactsBtn.addEventListener('click', importSampleContacts);
-            
-            // Contact modal
-            contactModalClose.addEventListener('click', () => contactModal.style.display = 'none');
-            contactCancel.addEventListener('click', () => contactModal.style.display = 'none');
-            contactSave.addEventListener('click', saveContact);
-            
-            // Time period selection
-            periods.forEach(period => {
-                period.addEventListener('click', function() {
-                    const timePeriod = this.dataset.period;
-                    setRandomVerseForTimePeriod(timePeriod);
+            // Reminder Tabs
+            reminderTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabType = tab.dataset.tab;
+                    selectReminderTab(tab, tabType);
                 });
             });
             
-            // Schedule modal
+            // Schedule Options
             scheduleOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    scheduleOptions.forEach(opt => opt.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    if (this.dataset.time === 'custom') {
-                        customTimeInput.style.display = 'block';
-                    } else {
-                        customTimeInput.style.display = 'none';
-                    }
+                option.addEventListener('click', () => {
+                    selectScheduleOption(option);
                 });
             });
             
-            scheduleCancel.addEventListener('click', () => scheduleModal.style.display = 'none');
-            scheduleConfirm.addEventListener('click', confirmSchedule);
-            
-            // Theme modal
-            themeModalClose.addEventListener('click', () => themeModal.style.display = 'none');
-            applyTheme.addEventListener('click', applyThemeHandler);
-            saveThemeImage.addEventListener('click', saveThemeImageHandler);
-            themeSelect.addEventListener('change', updateThemePreview);
-            
-            // Rating modal
-            rateButton.addEventListener('click', () => ratingModal.style.display = 'block');
-            ratingCancel.addEventListener('click', () => ratingModal.style.display = 'none');
-            ratingSubmit.addEventListener('click', submitRating);
-            
+            // Rating Stars
             ratingStars.forEach(star => {
-                star.addEventListener('click', function() {
-                    const rating = parseInt(this.dataset.rating);
-                    setRating(rating);
-                });
-                
-                star.addEventListener('mouseover', function() {
-                    const rating = parseInt(this.dataset.rating);
-                    highlightStars(rating);
+                star.addEventListener('click', () => {
+                    const rating = parseInt(star.dataset.rating);
+                    selectRating(rating);
                 });
             });
             
-            document.querySelector('.rating-stars').addEventListener('mouseleave', function() {
-                const currentRating = document.querySelector('.rating-star.active')?.dataset.rating || 0;
-                highlightStars(parseInt(currentRating));
-            });
+            // Rating Actions
+            ratingSubmit.addEventListener('click', submitRating);
+            ratingCancel.addEventListener('click', () => closeModal(ratingModal));
             
-            // Warning modal
-            warningContinue.addEventListener('click', () => warningModal.style.display = 'none');
-            warningLearnMore.addEventListener('click', () => {
-                warningModal.style.display = 'none';
-                showNotification('Visit our website for more information', 'info');
+            // Warning Actions
+            warningUnderstand.addEventListener('click', () => closeModal(warningModal));
+            warningLearnMore.addEventListener('click', showWarningDetails);
+            
+            // Contact Management
+            addContactBtn.addEventListener('click', addContact);
+            
+            // Reminder Management
+            saveReminderBtn.addEventListener('click', saveReminder);
+            
+            // Modal Closes
+            modalCloses.forEach(close => {
+                close.addEventListener('click', () => {
+                    const modal = close.closest('.modal');
+                    closeModal(modal);
+                });
             });
             
             // Close modals when clicking outside
-            window.addEventListener('click', function(event) {
-                if (event.target === shareModal) {
-                    shareModal.style.display = 'none';
-                }
-                if (event.target === reminderModal) {
-                    reminderModal.style.display = 'none';
-                }
-                if (event.target === contactModal) {
-                    contactModal.style.display = 'none';
-                }
-                if (event.target === ratingModal) {
-                    ratingModal.style.display = 'none';
-                }
-                if (event.target === warningModal) {
-                    warningModal.style.display = 'none';
-                }
-                if (event.target === scheduleModal) {
-                    scheduleModal.style.display = 'none';
-                }
-                if (event.target === themeModal) {
-                    themeModal.style.display = 'none';
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal')) {
+                    closeModal(e.target);
                 }
             });
         }
 
-        // Toggle theme
+        // Theme Management
         function toggleTheme() {
-            appState.settings.theme = appState.settings.theme === 'light' ? 'dark' : 'light';
-            document.body.classList.toggle('dark-mode', appState.settings.theme === 'dark');
-            saveAppState();
+            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+            applyTheme(currentTheme);
+            localStorage.setItem('theme', currentTheme);
         }
 
-        // Toggle favorite
-        function toggleFavorite() {
-            const isFavorite = appState.favorites.some(fav => 
-                fav.text === appState.currentVerse.text && 
-                fav.reference === appState.currentVerse.reference
-            );
-            
-            if (isFavorite) {
-                appState.favorites = appState.favorites.filter(fav => 
-                    !(fav.text === appState.currentVerse.text && 
-                    fav.reference === appState.currentVerse.reference)
-                );
-                favoriteBtn.innerHTML = '<i class="far fa-heart"></i>';
-                showNotification('Removed from favorites', 'success');
-                appState.statistics.favorites--;
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.querySelector('.theme-indicator').textContent = 'Dark';
             } else {
-                appState.favorites.push({...appState.currentVerse});
-                favoriteBtn.innerHTML = '<i class="fas fa-heart"></i>';
-                showNotification('Added to favorites', 'success');
-                appState.statistics.favorites++;
-            }
-            
-            saveAppState();
-        }
-
-        // Copy verse
-        function copyVerse() {
-            const verseToCopy = `${appState.currentVerse.text} - ${appState.currentVerse.reference}`;
-            navigator.clipboard.writeText(verseToCopy).then(() => {
-                showNotification('Verse copied to clipboard', 'success');
-            }).catch(() => {
-                // Fallback for older browsers
-                const textArea = document.createElement('textarea');
-                textArea.value = verseToCopy;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                showNotification('Verse copied to clipboard', 'success');
-            });
-        }
-
-        // Speak verse
-        function speakVerse() {
-            if ('speechSynthesis' in window) {
-                const utterance = new SpeechSynthesisUtterance();
-                utterance.text = `${appState.currentVerse.text} ${appState.currentVerse.reference}`;
-                utterance.rate = 0.8;
-                utterance.pitch = 1;
-                window.speechSynthesis.speak(utterance);
-                showNotification('Reading verse aloud', 'info');
-            } else {
-                showNotification('Text-to-speech not supported in your browser', 'error');
+                document.body.classList.remove('dark-mode');
+                document.querySelector('.theme-indicator').textContent = 'Light';
             }
         }
 
-        // Show previous verse
+        // Time and Greeting
+        function updateTimeGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const displayHours = hours % 12 || 12;
+            
+            document.getElementById('current-time').textContent = `${displayHours}:${minutes} ${ampm}`;
+            
+            let greeting = 'Good ';
+            if (hours < 12) {
+                greeting += 'Morning';
+            } else if (hours < 18) {
+                greeting += 'Afternoon';
+            } else {
+                greeting += 'Evening';
+            }
+            
+            document.querySelector('.time-greeting').textContent = greeting;
+        }
+
+        // Verse Management
+        function updateVerse() {
+            const verseData = verses[currentPeriod][currentVerseIndex];
+            const verseCard = document.querySelector('.verse-card');
+            
+            verseCard.querySelector('.verse-text').textContent = verseData.text;
+            verseCard.querySelector('.verse-reference').textContent = verseData.reference;
+            verseCard.querySelector('.verse-translation-badge').textContent = verseData.translation;
+            verseCard.querySelector('.verse-time-badge').textContent = `${currentPeriod.charAt(0).toUpperCase() + currentPeriod.slice(1)} Verse`;
+            
+            verseCard.classList.remove('fade-in');
+            void verseCard.offsetWidth; // Trigger reflow
+            verseCard.classList.add('fade-in');
+        }
+
         function showPreviousVerse() {
-            const currentTimePeriod = appState.currentVerse.timePeriod;
-            const verses = bibleVerses[currentTimePeriod];
-            if (verses && verses.length > 1) {
-                const currentIndex = verses.findIndex(verse => 
-                    verse.text === appState.currentVerse.text && 
-                    verse.reference === appState.currentVerse.reference
-                );
-                
-                let newIndex = currentIndex - 1;
-                if (newIndex < 0) newIndex = verses.length - 1;
-                
-                appState.currentVerse = {
-                    ...verses[newIndex],
-                    timePeriod: currentTimePeriod
-                };
-                updateUI();
-                saveAppState();
-            }
-        }
-
-        // Show next verse
-        function showNextVerse() {
-            const currentTimePeriod = appState.currentVerse.timePeriod;
-            const verses = bibleVerses[currentTimePeriod];
-            if (verses && verses.length > 1) {
-                const currentIndex = verses.findIndex(verse => 
-                    verse.text === appState.currentVerse.text && 
-                    verse.reference === appState.currentVerse.reference
-                );
-                
-                let newIndex = currentIndex + 1;
-                if (newIndex >= verses.length) newIndex = 0;
-                
-                appState.currentVerse = {
-                    ...verses[newIndex],
-                    timePeriod: currentTimePeriod
-                };
-                updateUI();
-                saveAppState();
-            }
-        }
-
-        // Share verse
-        function shareVerse(platform) {
-            const verseText = appState.currentVerse.text;
-            const verseReference = appState.currentVerse.reference;
-            const shareText = `${verseText} - ${verseReference}`;
-            
-            // Add to share history
-            appState.shareHistory.unshift({
-                verse: verseText,
-                reference: verseReference,
-                platform: platform,
-                timestamp: new Date().toISOString()
-            });
-            
-            // Update statistics
-            appState.statistics.shared++;
-            
-            // Simulate sharing based on platform
-            let message = '';
-            switch (platform) {
-                case 'whatsapp':
-                    message = `Check out this Bible verse: ${shareText}`;
-                    // In a real app, you would use the WhatsApp API
-                    break;
-                case 'facebook':
-                    message = `Shared Bible verse: ${shareText}`;
-                    // In a real app, you would use the Facebook API
-                    break;
-                case 'twitter':
-                    message = `Bible verse: ${shareText}`;
-                    // In a real app, you would use the Twitter API
-                    break;
-                case 'instagram':
-                    message = `Bible verse of the day: ${shareText}`;
-                    // In a real app, you would create an image share
-                    break;
-                case 'email':
-                    message = `Subject: Bible Verse\n\n${shareText}`;
-                    // In a real app, you would use the mailto: protocol
-                    break;
-                case 'sms':
-                    message = `Bible verse: ${shareText}`;
-                    // In a real app, you would use the SMS API
-                    break;
-                case 'device':
-                    // In a real app, you would use the Web Share API
-                    if (navigator.share) {
-                        navigator.share({
-                            title: 'Bible Verse',
-                            text: shareText
-                        }).then(() => {
-                            showNotification('Verse shared successfully', 'success');
-                        }).catch(() => {
-                            showNotification('Share cancelled', 'info');
-                        });
-                    } else {
-                        showNotification('Device sharing not supported', 'error');
-                    }
-                    return;
-                case 'link':
-                    navigator.clipboard.writeText(shareText).then(() => {
-                        showNotification('Verse copied to clipboard', 'success');
-                    });
-                    return;
-            }
-            
-            showNotification(`Verse shared via ${platform}`, 'success');
-            shareModal.style.display = 'none';
-            saveAppState();
-            updateUI();
-        }
-
-        // Save reminder
-        function saveReminder() {
-            const title = document.getElementById('reminderTitle').value || 'Read Bible Verse';
-            const note = document.getElementById('reminderNote').value || '';
-            const dateTime = document.getElementById('reminderDateTime').value;
-            const repeat = document.getElementById('reminderRepeat').value;
-            
-            if (!dateTime) {
-                showNotification('Please select a date and time', 'error');
-                return;
-            }
-            
-            const reminder = {
-                id: Date.now().toString(),
-                title,
-                note,
-                dateTime,
-                repeat,
-                completed: false
-            };
-            
-            appState.reminders.push(reminder);
-            appState.statistics.totalReminders++;
-            appState.statistics.activeReminders++;
-            
-            showNotification('Reminder set successfully', 'success');
-            reminderModal.style.display = 'none';
-            saveAppState();
-            updateUI();
-        }
-
-        // Complete reminder
-        function completeReminder(id) {
-            const reminder = appState.reminders.find(r => r.id === id);
-            if (reminder) {
-                reminder.completed = true;
-                appState.statistics.activeReminders--;
-                appState.statistics.completedReminders++;
-                showNotification('Reminder completed', 'success');
-                saveAppState();
-                updateUI();
-            }
-        }
-
-        // Delete reminder
-        function deleteReminder(id) {
-            const reminderIndex = appState.reminders.findIndex(r => r.id === id);
-            if (reminderIndex !== -1) {
-                const reminder = appState.reminders[reminderIndex];
-                appState.reminders.splice(reminderIndex, 1);
-                appState.statistics.totalReminders--;
-                if (!reminder.completed) {
-                    appState.statistics.activeReminders--;
-                } else {
-                    appState.statistics.completedReminders--;
-                }
-                showNotification('Reminder deleted', 'success');
-                saveAppState();
-                updateUI();
-            }
-        }
-
-        // Save custom verse
-        function saveCustomVerseHandler() {
-            const text = document.getElementById('customVerseText').value;
-            const reference = document.getElementById('customVerseReference').value;
-            const translation = document.getElementById('customVerseTranslation').value;
-            
-            if (!text || !reference) {
-                showNotification('Please enter both verse text and reference', 'error');
-                return;
-            }
-            
-            const customVerse = {
-                text,
-                reference,
-                translation
-            };
-            
-            appState.customVerses.push(customVerse);
-            showNotification('Custom verse added', 'success');
-            customVerseForm.style.display = 'none';
-            
-            // Clear form
-            document.getElementById('customVerseText').value = '';
-            document.getElementById('customVerseReference').value = '';
-            
-            saveAppState();
-            updateUI();
-        }
-
-        // Toggle collapsible section
-        function toggleCollapsible(button, content) {
-            const isActive = button.classList.contains('active');
-            
-            // Close all collapsible sections
-            document.querySelectorAll('.collapsible-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.querySelectorAll('.collapsible-content').forEach(cont => {
-                cont.style.display = 'none';
-            });
-            
-            // Open this section if it wasn't active
-            if (!isActive) {
-                button.classList.add('active');
-                content.style.display = 'block';
-            }
-        }
-
-        // Clear share history
-        function clearShareHistory() {
-            appState.shareHistory = [];
-            showNotification('Share history cleared', 'success');
-            saveAppState();
-            updateUI();
-        }
-
-        // Copy verse for broadcast
-        function copyVerseForBroadcastHandler() {
-            const verseToCopy = `"${appState.currentVerse.text}" - ${appState.currentVerse.reference}`;
-            navigator.clipboard.writeText(verseToCopy).then(() => {
-                const button = copyVerseForBroadcast;
-                button.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                button.classList.add('success');
-                showNotification('Verse copied for broadcast', 'success');
-                
-                setTimeout(() => {
-                    button.innerHTML = '<i class="far fa-copy"></i> "' + appState.currentVerse.text + '" - ' + appState.currentVerse.reference;
-                    button.classList.remove('success');
-                }, 2000);
-            });
-        }
-
-        // Save contact
-        function saveContact() {
-            const name = document.getElementById('contactName').value;
-            const phone = document.getElementById('contactPhone').value;
-            const email = document.getElementById('contactEmail').value;
-            const group = document.getElementById('contactGroup').value;
-            
-            if (!name || !phone) {
-                showNotification('Please enter at least name and phone number', 'error');
-                return;
-            }
-            
-            const contact = {
-                id: Date.now().toString(),
-                name,
-                phone,
-                email,
-                group
-            };
-            
-            appState.contacts.push(contact);
-            showNotification('Contact added successfully', 'success');
-            contactModal.style.display = 'none';
-            
-            // Clear form
-            document.getElementById('contactName').value = '';
-            document.getElementById('contactPhone').value = '';
-            document.getElementById('contactEmail').value = '';
-            
-            saveAppState();
-            updateUI();
-        }
-
-        // Edit contact
-        function editContact(id) {
-            // In a real app, you would populate the form with contact data
-            showNotification('Edit contact feature coming soon', 'info');
-        }
-
-        // Delete contact
-        function deleteContact(id) {
-            const contactIndex = appState.contacts.findIndex(c => c.id === id);
-            if (contactIndex !== -1) {
-                appState.contacts.splice(contactIndex, 1);
-                showNotification('Contact deleted', 'success');
-                saveAppState();
-                updateUI();
-            }
-        }
-
-        // Import sample contacts
-        function importSampleContacts() {
-            const sampleContacts = [
-                { id: '1', name: 'John Smith', phone: '+1234567890', email: 'john@example.com', group: 'family' },
-                { id: '2', name: 'Sarah Johnson', phone: '+1234567891', email: 'sarah@example.com', group: 'friends' },
-                { id: '3', name: 'Pastor Michael', phone: '+1234567892', email: 'pastor@church.com', group: 'church' }
-            ];
-            
-            appState.contacts = [...appState.contacts, ...sampleContacts];
-            showNotification('Sample contacts imported', 'success');
-            saveAppState();
-            updateUI();
-        }
-
-        // Confirm schedule
-        function confirmSchedule() {
-            const selectedOption = document.querySelector('.schedule-option.active');
-            if (!selectedOption) {
-                showNotification('Please select a schedule option', 'error');
-                return;
-            }
-            
-            const scheduleType = selectedOption.dataset.time;
-            let scheduleTime;
-            
-            if (scheduleType === 'custom') {
-                scheduleTime = document.getElementById('customTime').value;
-                if (!scheduleTime) {
-                    showNotification('Please select a custom time', 'error');
-                    return;
-                }
-            } else if (scheduleType === 'now') {
-                scheduleTime = 'immediately';
+            if (currentVerseIndex > 0) {
+                currentVerseIndex--;
             } else {
-                scheduleTime = scheduleType;
+                currentVerseIndex = verses[currentPeriod].length - 1;
+            }
+            updateVerse();
+        }
+
+        function showNextVerse() {
+            if (currentVerseIndex < verses[currentPeriod].length - 1) {
+                currentVerseIndex++;
+            } else {
+                currentVerseIndex = 0;
+            }
+            updateVerse();
+        }
+
+        // Time Period Selection
+        function selectTimePeriod(period) {
+            // Update UI
+            timePeriods.forEach(p => p.classList.remove('active'));
+            document.querySelector(`[data-period="${period}"]`).classList.add('active');
+            
+            // Update mode indicator
+            modeIndicator.classList.remove('auto', 'manual');
+            modeIndicator.classList.add('manual');
+            modeIndicator.innerHTML = `Manual Mode <span class="countdown">(${countdownSeconds}s)</span>`;
+            
+            // Update current period and verse
+            currentPeriod = period;
+            currentVerseIndex = 0;
+            updateVerse();
+        }
+
+        // Countdown Timer for Mode Reset
+        function startCountdownTimer() {
+            // Clear existing timer
+            if (countdownTimer) {
+                clearInterval(countdownTimer);
             }
             
-            showNotification(`Verse scheduled for ${scheduleTime}`, 'success');
-            scheduleModal.style.display = 'none';
+            // Reset countdown
+            countdownSeconds = 60;
+            updateCountdownDisplay();
+            
+            // Start new timer
+            countdownTimer = setInterval(() => {
+                countdownSeconds--;
+                updateCountdownDisplay();
+                
+                if (countdownSeconds <= 0) {
+                    resetToAutoMode();
+                    clearInterval(countdownTimer);
+                }
+            }, 1000);
         }
 
-        // Apply theme
-        function applyThemeHandler() {
-            const selectedTheme = themeSelect.value;
-            appState.settings.canvasStyle = selectedTheme;
-            showNotification(`Theme changed to ${selectedTheme}`, 'success');
-            themeModal.style.display = 'none';
-            updateUI();
-            saveAppState();
+        function updateCountdownDisplay() {
+            if (countdownElement) {
+                countdownElement.textContent = `(${countdownSeconds}s)`;
+            }
         }
 
-        // Save theme as image
-        function saveThemeImageHandler() {
-            showNotification('Theme image saved to gallery', 'success');
-            // In a real app, you would generate and save an image
+        function resetToAutoMode() {
+            // Determine current time period based on actual time
+            const now = new Date();
+            const hours = now.getHours();
+            
+            let autoPeriod = 'morning';
+            if (hours >= 12 && hours < 18) autoPeriod = 'afternoon';
+            else if (hours >= 18 || hours < 6) autoPeriod = 'evening';
+            if (hours >= 0 && hours < 6) autoPeriod = 'night';
+            
+            // Update UI
+            timePeriods.forEach(p => p.classList.remove('active'));
+            document.querySelector(`[data-period="${autoPeriod}"]`).classList.add('active');
+            
+            // Update mode indicator
+            modeIndicator.classList.remove('auto', 'manual');
+            modeIndicator.classList.add('auto');
+            modeIndicator.innerHTML = `Auto Mode <span class="countdown">(60s)</span>`;
+            
+            // Update current period and verse
+            currentPeriod = autoPeriod;
+            currentVerseIndex = 0;
+            updateVerse();
         }
 
-        // Update theme preview
-        function updateThemePreview() {
-            const selectedTheme = themeSelect.value;
-            // In a real app, you would update the canvas preview
+        // Custom Verse Management
+        function toggleCustomVerseForm() {
+            customVerseForm.classList.toggle('hidden');
         }
 
-        // Set rating
-        function setRating(rating) {
-            ratingStars.forEach(star => {
-                const starRating = parseInt(star.dataset.rating);
-                star.classList.toggle('active', starRating <= rating);
+        function saveCustomVerse() {
+            const verseText = document.getElementById('custom-verse-text').value;
+            const verseReference = document.getElementById('custom-verse-reference').value;
+            
+            if (verseText && verseReference) {
+                // Create new verse item
+                const verseItem = document.createElement('div');
+                verseItem.className = 'custom-verse-item';
+                verseItem.innerHTML = `
+                    <div class="verse-content">
+                        <strong>${verseText}</strong>
+                        <div class="verse-meta">
+                            <span>${verseReference}</span>
+                            <span>Added: Today</span>
+                        </div>
+                    </div>
+                    <button class="delete-verse">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+                
+                // Add delete functionality
+                verseItem.querySelector('.delete-verse').addEventListener('click', function() {
+                    verseItem.remove();
+                    showToast('Verse deleted successfully', 'success');
+                });
+                
+                // Add to list
+                document.querySelector('.custom-verses-list').appendChild(verseItem);
+                
+                // Reset form
+                document.getElementById('custom-verse-text').value = '';
+                document.getElementById('custom-verse-reference').value = '';
+                toggleCustomVerseForm();
+                
+                showToast('Custom verse added successfully', 'success');
+            } else {
+                showToast('Please fill in both fields', 'error');
+            }
+        }
+
+        // Share Type Selection
+        function selectShareType(button, type) {
+            shareTypeBtns.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            currentShareType = type;
+        }
+
+        // Reminder Tab Selection
+        function selectReminderTab(tab, type) {
+            reminderTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            currentReminderTab = type;
+        }
+
+        // Schedule Option Selection
+        function selectScheduleOption(option) {
+            scheduleOptions.forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+        }
+
+        // Rating System
+        function selectRating(rating) {
+            selectedRating = rating;
+            ratingStars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
             });
         }
 
-        // Highlight stars
-        function highlightStars(rating) {
-            ratingStars.forEach(star => {
-                const starRating = parseInt(star.dataset.rating);
-                star.classList.toggle('active', starRating <= rating);
-            });
-        }
-
-        // Submit rating
         function submitRating() {
-            const activeStar = document.querySelector('.rating-star.active');
-            if (!activeStar) {
-                showNotification('Please select a rating', 'error');
-                return;
+            if (selectedRating > 0) {
+                showToast(`Thank you for your ${selectedRating}-star rating!`, 'success');
+                closeModal(ratingModal);
+                
+                // Reset rating for next time
+                selectedRating = 0;
+                ratingStars.forEach(star => star.classList.remove('active'));
+                document.querySelector('.rating-comment').value = '';
+            } else {
+                showToast('Please select a rating', 'error');
             }
-            
-            const rating = parseInt(activeStar.dataset.rating);
-            const comment = document.querySelector('.rating-comment').value;
-            
-            // In a real app, you would send this to a server
-            console.log('Rating submitted:', { rating, comment });
-            
-            appState.rating.submitted = true;
-            appState.rating.showButton = false;
-            rateButton.style.display = 'none';
-            
-            showNotification('Thank you for your rating!', 'success');
-            ratingModal.style.display = 'none';
-            saveAppState();
         }
 
-        // Show notification
-        function showNotification(message, type = 'success') {
-            notification.textContent = message;
-            notification.className = 'notification';
-            notification.classList.add(type);
-            notification.style.display = 'block';
+        // Contact Management
+        function addContact() {
+            const name = document.getElementById('contact-name').value;
+            const number = document.getElementById('contact-number').value;
+            
+            if (name && number) {
+                // Create new contact item
+                const contactItem = document.createElement('div');
+                contactItem.className = 'contact-item';
+                contactItem.innerHTML = `
+                    <div class="contact-info">
+                        <div class="contact-name">${name}</div>
+                        <div class="contact-number">${number}</div>
+                    </div>
+                    <div class="contact-actions">
+                        <button class="contact-action-btn" title="Share">
+                            <i class="fas fa-share"></i>
+                        </button>
+                        <button class="contact-action-btn delete" title="Delete">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+                
+                // Add functionality
+                contactItem.querySelector('.contact-action-btn:not(.delete)').addEventListener('click', function() {
+                    showToast(`Verse shared with ${name}`, 'success');
+                });
+                
+                contactItem.querySelector('.contact-action-btn.delete').addEventListener('click', function() {
+                    contactItem.remove();
+                    showToast('Contact deleted', 'success');
+                });
+                
+                // Add to list
+                document.querySelector('.contact-list').appendChild(contactItem);
+                
+                // Reset form
+                document.getElementById('contact-name').value = '';
+                document.getElementById('contact-number').value = '';
+                
+                showToast('Contact added successfully', 'success');
+            } else {
+                showToast('Please fill in both fields', 'error');
+            }
+        }
+
+        // Reminder Management
+        function saveReminder() {
+            showToast('Reminder set successfully', 'success');
+            closeModal(reminderModal);
+        }
+
+        // Modal Management
+        function openModal(modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Warning Details
+        function showWarningDetails() {
+            closeModal(warningModal);
+            showToast('Redirecting to app information...', 'info');
+            // In a real app, this would redirect to a help page
+        }
+
+        // Toast Notifications
+        function showToast(message, type = 'info') {
+            toast.textContent = message;
+            toast.className = `toast ${type}`;
+            toast.classList.add('show');
             
             setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => {
-                    notification.style.display = 'none';
-                    notification.style.animation = '';
-                }, 300);
+                toast.classList.remove('show');
             }, 3000);
         }
 
-        // Utility functions
-        function capitalizeFirstLetter(string) {
-            return string.charAt(0).toUpperCase() + string.slice(1);
-        }
-
-        function formatDateTime(dateTimeString) {
-            const date = new Date(dateTimeString);
-            return date.toLocaleString([], { 
-                year: 'numeric', 
-                month: 'short', 
-                day: 'numeric',
-                hour: '2-digit', 
-                minute: '2-digit'
-            });
-        }
-
-        function getPlatformIcon(platform) {
-            const icons = {
-                whatsapp: 'whatsapp',
-                facebook: 'facebook-f',
-                twitter: 'twitter',
-                instagram: 'instagram',
-                email: 'envelope',
-                sms: 'comment',
-                device: 'share-alt',
-                link: 'link'
-            };
-            return icons[platform] || 'share-alt';
-        }
-
-        const timeIcons = {
-            morning: '🌅',
-            day: '☀️',
-            afternoon: '🌇',
-            evening: '🌆',
-            night: '🌙'
-        };
-
-        // Initialize the app
-        initApp();
+        // Initialize the app when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initApp);
     </script>
 </body>
 </html>
